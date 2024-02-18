@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root{
+  --bgColor: hsl(60, 100%, 98%);
+  --mainColor: #ef2853;
+  --headingText: #21040a;
+  --paraText: #49373b;
+  --opacity: 30%;
+}
+*{
+  margin: 0;
+  padding: 0;
+  
+  /* background-color: #000000; */
+  /* font-family: "Lobster", sans-serif; */
+}
+body{
+  background: var(--bgColor);
+  font-family: "Poppins", sans-serif;
+}
+button{
+  padding: 10px 30px;
+  background-color: #ef2853;
+  color: white;
+  border-radius: 2px;
+  transition: all 0.5s;
+}
+button:hover{
+  background: #dc264d;
+}
+.heading{
+  font-family: "Lobster", sans-serif;
+  color: var(--mainColor);
+}
+.secondary-text{
+  color: var(--paraText);
+}
+hr{
+  border-color: var(--mainColor);
+}

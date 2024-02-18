@@ -1,0 +1,25 @@
+.left-img img{
+    width: 180px;
+    margin: 20px 0;
+    opacity: var(--opacity);
+}
+.right-img img{
+    width: 180px;
+    margin: 20px 0;
+    right: 0;
+    opacity: var(--opacity);
+}
+.slider-img img{
+    width: 350px !important;
+}
+@media screen and (max-width: 1050px) {
+    .left-img img{
+        margin: 0;
+        width: 140px;
+    }
+    .right-img img{
+        margin: 0;
+        padding-top: 30px;
+        width: 140px;
+    }
+}
