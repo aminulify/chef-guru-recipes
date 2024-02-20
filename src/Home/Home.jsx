@@ -1,11 +1,9 @@
 import React from 'react';
-import Header from '../Shared/Header/Header';
 import './Home.css';
 import { CiCircleChevRight } from "react-icons/ci";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import { Link, Outlet, useNavigation } from 'react-router-dom';
-import Footer from '../Shared/Footer/Footer';
+import { Link, useNavigation } from 'react-router-dom';
 import BeatLoader from "react-spinners/BeatLoader";
 
 const Home = () => {
@@ -17,8 +15,9 @@ const Home = () => {
                 {
                     navigation.state === 'loading' ?  <BeatLoader color="#ef2853" size={20} /> : ''
                 }
+
             </div>
-            <Header></Header>
+      
             <div className='lg:grid flex flex-col-reverse grid-cols-reverse lg:grid-cols-2 lg:gap-8 pt-28'>
                     <div className='flex relative'>
                         {/* left side image  */}
@@ -58,7 +57,7 @@ const Home = () => {
                         </div>
                     </div>
             </div>
-               <Outlet></Outlet>
+              
         </div>
     );
 };

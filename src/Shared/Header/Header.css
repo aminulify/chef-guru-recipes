@@ -1,15 +1,21 @@
 .logo img{
     width: 120px;
 }
-
 .nav-text li{
    list-style: none;
-   padding: 0 15px;
+   
    margin: 0 5px;
    border-bottom: 1px solid transparent;
    color: var(--headingText);
 }
-.nav-text li:hover {
+.nav-text a{
+    padding: 0 15px;
+}
+.nav-text a:hover, .nav-text a:active {
+    color: #ef2853;
+    border-bottom: 1px solid #ef2853;
+}
+.nav-text .active{
     color: #ef2853;
     border-bottom: 1px solid #ef2853;
 }
@@ -35,8 +41,9 @@
     }
     .responsiveStyle{
         display: block;
-        background-color: rgba(254, 254, 240, 0.258);
-        backdrop-filter: blur(3px);
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.596);
+        /* backdrop-filter: blur(3px); */
         padding: 50px 7%;
         position: absolute;
         margin-top: 300px;
@@ -47,4 +54,11 @@
     .responsiveStyle li{
         padding: 5px 0;
     }
+    .nav-text li{
+        color: #ffffff;
+     }
+     
+     .nav-text a:hover{
+        width: 100%;
+     }
 }

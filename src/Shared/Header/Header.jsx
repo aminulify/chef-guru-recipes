@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 import { MdLight } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
+import { useGlobalContext } from '../../Context/ProviderContext';
 
 const Header = () => {
-
-    const [dayMode, setDayMode] = useState(true);
+    const {dayMode, setDayMode} = useGlobalContext();
+    // const [dayMode, setDayMode] = useState(true);
     const [menu, setMenu] = useState(true);
+
     const dayNightMode = () =>{
         setDayMode(!dayMode);
     }
@@ -20,6 +22,7 @@ const Header = () => {
         root.style.setProperty('--headingText', '#21040a')
         root.style.setProperty('--paraText', '#49373b')
         root.style.setProperty('--opacity', '30%')
+        root.style.setProperty('--footerBg', '#ef285320')
     }
     else{
         root.style.setProperty('--bgColor', '#000000')
@@ -27,12 +30,13 @@ const Header = () => {
         root.style.setProperty('--headingText', '#ffffff')
         root.style.setProperty('--paraText', '#dedede')
         root.style.setProperty('--opacity', '100%')
+        root.style.setProperty('--footerBg', '#ef285320')
     }
 
     const handleMenu = () =>{
         setMenu(!menu);
     }
-    
+
     return (
            <div data-aos="fade-up" className='bgColor navbar-color fixed top-0 w-full'>
                 <div className='flex justify-between px-10 md:px-16 lg:px-20 items-center navbar'>
@@ -43,14 +47,14 @@ const Header = () => {
                     </div>
                     <div>
                         <nav className={`nav-text flex lg:flex-row flex-col ${menu ? "hidden":"responsiveStyle"} lg:flex`}>
-                            <li>
-                                <Link to='/'>Home</Link>
+                            <li className=''>
+                                <NavLink to='/'>Home</NavLink>
                             </li>
                             <li>
-                                <Link to='/recipe'>Recipe</Link>
+                                <NavLink to='/recipe'>Recipe</NavLink>
                             </li>
                             <li>
-                                <Link to='/blogs'>Blogs</Link>
+                                <NavLink to='/blog'>Blog</NavLink>
                             </li>
                             
                         </nav>

@@ -9,6 +9,7 @@
   --headingText: #21040a;
   --paraText: #49373b;
   --opacity: 30%;
+  --footerBg: #ef285320;
 }
 *{
   margin: 0;
@@ -40,4 +41,18 @@ button:hover{
 }
 hr{
   border-color: var(--mainColor);
+}
+p{
+  color: var(--paraText);
+}
+label{
+  color: var(--mainColor);
+}
+input{
+  background: var(--footerBg);
+  border: none;
+  border-bottom: 1px solid var(--mainColor);
+}
+input:focus{
+  border: 1px;
 }

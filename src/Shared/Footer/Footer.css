@@ -3,3 +3,30 @@
     text-align: center;
     margin: 10px 0;
 }
+.footer-bg{
+    background-color: var(--footerBg);
+}
+.downloader-img img:nth-child(1){
+    margin-bottom: 10px;
+}
+.downloader-img img{
+    width: 300px;
+}
+.footer-text{
+    width: 40%;
+}
+
+@media screen and (max-width: 1050px) {
+    .downloader-img{
+        padding-top: 20px;
+        display: grid;
+        justify-content: center;
+    }
+    .downloader-img img{
+        width: 150px;
+    }
+    .footer-text{
+        width: 100%;
+    }
+
+}
