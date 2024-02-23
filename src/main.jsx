@@ -6,9 +6,12 @@ import {
 } from "react-router-dom";
 import router from './Router/Router';
 import { ProviderContext } from './Context/ProviderContext';
+import AuthProvider from './AuthProvider/AuthProvider';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ProviderContext>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </ProviderContext>
 )

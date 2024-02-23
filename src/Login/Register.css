@@ -8,8 +8,9 @@
 .signup-form input{
     background-color: transparent;
     border-bottom: 1px solid var(--mainColor);
-    color: white;
+    color: black;
 }
+
 @media screen and (max-width:1050px) {
     .signup-form{
         width: 80%;

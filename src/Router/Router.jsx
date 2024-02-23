@@ -9,6 +9,7 @@ import Header from '../Shared/Header/Header';
 import Main from '../MainLayout/Main';
 import Login from '../Login/Login';
 import Register from '../Login/Register';
+import Recipe from '../Recipe/Recipe';
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,11 @@ const router = createBrowserRouter([
             path: '/registration',
             element: <Register></Register>
             
+        },
+        {
+          path: '/recipe',
+          element: <Recipe></Recipe>,
+          loader: ()=> fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=chicken')
         }
       ]
     }

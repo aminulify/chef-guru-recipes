@@ -8,7 +8,7 @@
 .login-form input{
     background-color: transparent;
     border-bottom: 1px solid var(--mainColor);
-    color: white;
+    color: black;
 }
 .login_doodles img{
     position: absolute;

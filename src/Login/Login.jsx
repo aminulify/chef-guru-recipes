@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './Login.css';
 import Header from '../Shared/Header/Header';
 import Footer from '../Shared/Footer/Footer';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Login = () => {
+    const {loginUser} = useContext(AuthContext);
     return (
         <div>
             <div className='login_doodles'>
