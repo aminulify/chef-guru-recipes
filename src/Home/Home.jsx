@@ -13,7 +13,7 @@ const Home = () => {
 
     const [chefData, setChefData] = useState([]);
      useEffect(()=>{
-        fetch('http://localhost:5000/chefs')
+        fetch('https://chef-guru-recipe-server.vercel.app/chefs')
         .then(res=>res.json())
         .then(data=>setChefData(data))
 

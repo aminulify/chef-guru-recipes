@@ -19,7 +19,7 @@ const router = createBrowserRouter([
         {
             path: '/',
             element: <Home></Home>,
-            loader: ()=> fetch('http://localhost:5000/chefs')
+            loader: ()=> fetch('https://chef-guru-recipe-server.vercel.app/chefs')
         },
         {
             path: '/blog',
