@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css';
 import { CiCircleChevRight } from "react-icons/ci";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import { Link, useNavigation } from 'react-router-dom';
+import { Link, useLoaderData, useNavigation } from 'react-router-dom';
 import BeatLoader from "react-spinners/BeatLoader";
+import Chefs from '../Chefs/Chefs';
 
 const Home = () => {
     const navigation = useNavigation();
-    
+    // const chefData = useLoaderData();
+
+    const [chefData, setChefData] = useState([]);
+     useEffect(()=>{
+        fetch('http://localhost:5000/chefs')
+        .then(res=>res.json())
+        .then(data=>setChefData(data))
+
+        // .then(data=>console.log(data))
+        .catch(error=>console.log(error))
+
+    },[])
+    // console.log(chefData);
+
     return (
         <div className=''>
             <div className='absolute top-1/2 right-1/2'>
@@ -58,6 +72,19 @@ const Home = () => {
                     </div>
             </div>
               
+              {/* chef experience data  */}
+              <h1 data-aos='fade-right' className='heading text-center text-5xl mt-5'>Chefs</h1>
+              <div className="chef-datas grid grid-cols-1 lg:grid-cols-2 gap-5 lg:mx-20 mx-5 my-10">
+                {
+                  
+                    chefData.map(data=><Chefs
+                        key={data.id}
+                        data={data}
+                    ></Chefs> )
+
+                    
+                }
+              </div>
         </div>
     );
 };

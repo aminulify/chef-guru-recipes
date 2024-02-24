@@ -3,3 +3,28 @@
     font-size: 45px;
     padding: 90px 0 20px 0;
 }
+
+.modalN{
+    /* background-color: rgba(0, 0, 0, 0.119); */
+
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    overflow-y: scroll;
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    background-color: var(--bgColor);
+    box-shadow: 5px 5px 30px #00000039;
+    border-radius: 5px;
+    /* left: 50%; */
+    /* opacity: 1; */
+}
+.modalN img{
+    border-radius: 2px;
+    transition: all .5s;
+}
+.modalN img:hover{
+    transform: scale(1.03);
+}

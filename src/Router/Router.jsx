@@ -18,7 +18,8 @@ const router = createBrowserRouter([
       children: [
         {
             path: '/',
-            element: <Home></Home>
+            element: <Home></Home>,
+            loader: ()=> fetch('http://localhost:5000/chefs')
         },
         {
             path: '/blog',
@@ -38,8 +39,9 @@ const router = createBrowserRouter([
           path: '/recipe',
           element: <Recipe></Recipe>,
           loader: ()=> fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=chicken')
-        }
-      ]
+        },
+        
+      ],
     }
 ]);
 

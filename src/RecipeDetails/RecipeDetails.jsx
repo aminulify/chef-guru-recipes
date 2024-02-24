@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './RecipeDetails.css';
-import { Link } from 'react-router-dom';
 
-const RecipeDetails = ({data}) => {
+const RecipeDetails = ({data,handleItemModal}) => {
     const {strMeal, strInstructions, strMealThumb, idMeal} = data;
+    
+
+    
+
     return (
         <div className='p-4 border rounded-md flex gap-4 items-center'>
             <div className="img-section">
@@ -14,8 +17,10 @@ const RecipeDetails = ({data}) => {
                 <p><small>
                 {strInstructions.length < 250 ? strInstructions : strInstructions.slice(0,150)+"..."}
                 </small></p>
-                <Link to={`/recipe/${idMeal}`}><button className='my-4'>View More</button></Link>
+                <button id={idMeal} className='my-4' onClick={handleItemModal}>View More</button>
             </div>
+            
+           
         </div>
     );
 };

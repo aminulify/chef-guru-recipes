@@ -1,0 +1,27 @@
+.chef-sections{
+    transition: all 0.3s;
+}
+.chef-sections:hover{
+    box-shadow: 2px 2px 5px #0000001f;
+}
+.btn-wishlist{
+    font-size: 20px;
+    transition: all 0.2s;
+    
+}
+.booked{
+    color: var(--mainColor);
+}
+.unbooked{
+    color: black;
+}
+.btn-wishlist:hover{
+    color: var(--mainColor);
+}
+.btn-wishlist:active{
+    font-size: 25px;
+}
+.chef-section-btn a{
+    color: var(--mainColor);
+    text-decoration: underline;
+}
