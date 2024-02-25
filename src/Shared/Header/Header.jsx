@@ -76,7 +76,7 @@ const Header = () => {
                             user ? <button onClick={handleLogout}>Logout</button> : <button><Link to='/login'>Login</Link></button>
                         }
                         
-                        <div className='header-img w-8 h-8 tooltip' data-tip={user?.displayName}  >
+                        <div className='header-img w-8 h-8 tooltip tooltip-left tooltip-warning' data-tip={user?.displayName}  >
                             {
                                 user ? <img src={user?.photoURL} alt="" />:''
                             }
