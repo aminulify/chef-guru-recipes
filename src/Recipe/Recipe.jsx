@@ -36,7 +36,8 @@ const Recipe = () => {
         <div className='main-data'>
              {modalShow && 
 
-             <div className={`modalN fixed mx-5 lg:mx-20`}>
+             <div className='modal-main'>
+                <div className={`modalN fixed mx-5 lg:mx-20`}>
                 <div>
                     <img src={modalData.strMealThumb} alt="thumbnail image" />
                     <h1 className='heading text-3xl mt-4'>{modalData.strMeal}</h1>
@@ -49,6 +50,7 @@ const Recipe = () => {
                     </div>
                 </div>
             </div>
+             </div>
                 }
             <h1 className='heading recipe-heading'>Recipes</h1>
             <div className='right-img' data-aos="fade-left" data-aos-delay='500'>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Home.css';
 import { CiCircleChevRight } from "react-icons/ci";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -6,6 +6,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { Link, useLoaderData, useNavigation } from 'react-router-dom';
 import BeatLoader from "react-spinners/BeatLoader";
 import Chefs from '../Chefs/Chefs';
+import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Home = () => {
     const navigation = useNavigation();

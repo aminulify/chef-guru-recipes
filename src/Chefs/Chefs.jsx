@@ -5,6 +5,9 @@ import ReactStars from "react-rating-stars-component"
 import { FaRegHeart } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { BsBookmarkCheckFill } from "react-icons/bs";
+import { FaRegStar } from "react-icons/fa";
+import { FaStarHalfAlt } from "react-icons/fa";
+import { FaStar } from "react-icons/fa";
 
 const Chefs = ({data}) => {
     const {chefName, country, chefImg, chefDescription, rating, view} = data;
@@ -26,7 +29,7 @@ const Chefs = ({data}) => {
                     <h1 className='heading text-2xl'>{chefName}</h1>
                     <p><small>{chefDescription}</small></p>
                     <div className='flex justify-between'>
-                        <div className='flex items-center gap-5'>
+                        <div className='lg:flex items-center gap-5'>
                             <div>
                                 <p><small>{country}</small></p>
                             </div>
@@ -41,6 +44,13 @@ const Chefs = ({data}) => {
                                 size={24}
                                 value={rating * 1}
                                 // * 1 means it works like parseInt "make integer"
+
+                                emptyIcon={<FaRegStar/>}
+                                halfIcon={<FaStarHalfAlt />}
+                                fulledIcon={<FaStar/>}
+                                edit={false}
+                                isHalf={true}
+                                
                                 activeColor="#ffd700"
                             /> <p><small>({rating})</small></p>
                         </div>

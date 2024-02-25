@@ -2,10 +2,13 @@ import React, { useContext, useState } from 'react';
 import './Register.css'
 import Header from '../Shared/Header/Header';
 import Footer from '../Shared/Footer/Footer';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Register = () => {
+    const {user} = useContext(AuthContext);
+    const [success, setSuccess] = useState();
+    const navigate = useNavigate();
     const [userData, setUserData] = useState({
         email:'',
         name:'',
@@ -31,9 +34,32 @@ const Register = () => {
         const yourPassword = form.password.value;
         const yourImgURL = form.imgURL.value;
         const displayName = form.name.value;
+        console.log(yourImgURL,displayName)
+
+        createUser(yourEmail, yourPassword)
+        .then(result=>{
+            console.log(result.user);
+
+                useMoreInfo(displayName, yourImgURL)
+            .then(result=>{
+                setSuccess('*Congratulations! Your registration done.')
+                alert('Go explore us!')
+                navigate('/')
+                console.log(result.user);
+            })
+            .catch(error=>{
+                setSuccess();
+                console.log(error);
+                setError('*Try again!');
+            })
+        })
+        .catch(error=>{
+            setSuccess('Try Again!');
+            console.log(error);
+        })
+
+
         
-        createUser(yourEmail, yourPassword);
-        useMoreInfo(displayName, yourImgURL);
 
         
         if(email && name && contact && password && imgURL){
@@ -59,7 +85,6 @@ const Register = () => {
                 password:'',
                 imgURL:'',
             })
-            alert('Data Stored');
         }
         }
         else{
@@ -96,11 +121,17 @@ const Register = () => {
                     <label>Profile</label>
                     <input type="text" name='imgURL' placeholder='Your Image URL (Optional)' onChange={handleData} value={userData.imgURL} />
                 </div>
+                {
+                    <p>
+                        <small className='text-green-500'>{success}</small> 
+                    </p>
+                }
                 <p><small>Already do you have an account? <Link to='/login'><span className='text-red-500 underline'>Login!</span></Link></small></p>
                 <button>Enroll</button>
+              
             </form>
 
-            {/* <Footer></Footer> */}
+         
         </div>
     );
 };

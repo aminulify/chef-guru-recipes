@@ -3,13 +3,14 @@ import {
     createBrowserRouter
   } from "react-router-dom";
 import Home from '../Home/Home';
-import Footer from '../Shared/Footer/Footer';
+// import Footer from '../Shared/Footer/Footer';
 import Blog from '../Blog/Blog';
 import Header from '../Shared/Header/Header';
 import Main from '../MainLayout/Main';
 import Login from '../Login/Login';
 import Register from '../Login/Register';
 import Recipe from '../Recipe/Recipe';
+// import PrivateRoute from '../PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
     {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/recipe',
-          element: <Recipe></Recipe>,
+          element:<Recipe></Recipe>,
           loader: ()=> fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=chicken')
         },
         

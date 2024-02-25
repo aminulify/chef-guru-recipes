@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import './Header.css';
 import { MdLight } from "react-icons/md";
@@ -6,14 +6,21 @@ import { MdLightMode } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
 import { useGlobalContext } from '../../Context/ProviderContext';
+import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 const Header = () => {
     const {dayMode, setDayMode} = useGlobalContext();
     // const [dayMode, setDayMode] = useState(true);
     const [menu, setMenu] = useState(true);
+    const {user, logOut} = useContext(AuthContext);
+    console.log(user);
 
     const dayNightMode = () =>{
         setDayMode(!dayMode);
+    }
+
+    const handleLogout = () =>{
+        logOut();
     }
     let root = document.querySelector(':root');
     if(dayMode){
@@ -65,7 +72,15 @@ const Header = () => {
                                     dayMode ? <MdLightMode className='text-2xl'/> : <MdLight className='text-2xl'/> 
                                 }
                             </div>
-                        <button><Link to='/login'>Login</Link></button>
+                        {
+                            user ? <button onClick={handleLogout}>Logout</button> : <button><Link to='/login'>Login</Link></button>
+                        }
+                        
+                        <div className='header-img w-8 h-8 tooltip' data-tip={user?.displayName}  >
+                            {
+                                user ? <img src={user?.photoURL} alt="" />:''
+                            }
+                        </div>
                     </div>
                     <div className='menu-bar hidden' onClick={handleMenu}>
                         {
