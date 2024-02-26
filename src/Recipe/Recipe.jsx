@@ -35,7 +35,6 @@ const Recipe = () => {
     return (
         <div className='main-data'>
              {modalShow && 
-
              <div className='modal-main'>
                 <div className={`modalN fixed mx-5 lg:mx-20`}>
                 <div>
@@ -62,8 +61,7 @@ const Recipe = () => {
                         key={data.idMeal}
                         data={data}
                         handleItemModal={handleItemModal}
-                        
-                        
+                                              
                     ></RecipeDetails>)
                 }
             </div>

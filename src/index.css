@@ -36,8 +36,9 @@ button:hover{
   font-family: "Lobster", sans-serif;
   color: var(--mainColor);
 }
-.secondary-text{
+.secondary-text, input{
   color: var(--paraText);
+
 }
 hr{
   border-color: var(--mainColor);

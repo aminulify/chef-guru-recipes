@@ -38,11 +38,11 @@ const Login = () => {
             <form onSubmit={handleLogin} className='mx-auto login-form pt-5 pb-16'>
                 <div className='grid pb-3'>
                     <label>Email</label>
-                    <input type="text" name='email' placeholder='example@gmail.com'/>
+                    <input type="text" name='email' placeholder='example@gmail.com'className='secondary-text'/>
                 </div>
                 <div className='grid pb-3'>
                     <label>Password</label>
-                    <input type="password" name='password' placeholder='Password'/>
+                    <input type="password" name='password' placeholder='Password'className='secondary-text'/>
                 </div>
                 <p><small className='text-green-500'>{success}</small></p>
                 <p><small>Are you new user? <Link to='/registration'><span className='text-red-500 underline'>Registration!</span></Link></small></p>

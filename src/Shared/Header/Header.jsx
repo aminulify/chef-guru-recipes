@@ -76,11 +76,11 @@ const Header = () => {
                             user ? <button onClick={handleLogout}>Logout</button> : <button><Link to='/login'>Login</Link></button>
                         }
                         
-                        <div className='header-img w-8 h-8 tooltip tooltip-left tooltip-warning' data-tip={user?.displayName}  >
+                        
                             {
-                                user ? <img src={user?.photoURL} alt="" />:''
+                                user ? <div className='header-img w-8 h-8 tooltip tooltip-left tooltip-warning' data-tip={user?.displayName}  ><img src={user?.photoURL} alt="" /></div>:''
                             }
-                        </div>
+                        
                     </div>
                     <div className='menu-bar hidden' onClick={handleMenu}>
                         {
