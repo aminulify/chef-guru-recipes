@@ -40,7 +40,14 @@ const Recipe = () => {
                 <div>
                     <img src={modalData.strMealThumb} alt="thumbnail image" />
                     <h1 className='heading text-3xl mt-4'>{modalData.strMeal}</h1>
+                    <br />
+                    <p><small><b>Items:</b> {modalData.strIngredient1}, {modalData.strIngredient2}, {modalData.strIngredient3}, {modalData.strIngredient4},{modalData.strIngredient5}, {modalData.strIngredient6}, {modalData.strIngredient7}, {modalData.strIngredient8}, {modalData.strIngredient9}, {modalData.strIngredient10},{modalData.strIngredient11}, {modalData.strIngredient12}, {modalData.strIngredient13}</small></p>
+                    <br />
+                    <p><small><b>Cooking: </b> {modalData.strMeasure1}, {modalData.strMeasure2}, {modalData.strMeasure3}, {modalData.strMeasure4}, {modalData.strMeasure5}, {modalData.strMeasure6}, {modalData.strMeasure7}, {modalData.strMeasure8}, {modalData.strMeasure9},{modalData.strMeasure10}, {modalData.strMeasure11}, {modalData.strMeasure12}</small></p>
+                    <br />
                     <p><small>{modalData.strInstructions}</small></p>
+                    
+                    
                     <div className='grid grid-cols-2 gap-5 mt-4 mb-2'>
                         <Link to={modalData.strYoutube}><button className='w-full'>Youtube</button></Link>
 
