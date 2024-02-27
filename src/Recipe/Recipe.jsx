@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import './Recipe.css';
 import { Link, useLoaderData } from 'react-router-dom';
 import RecipeDetails from '../RecipeDetails/RecipeDetails';
+import useTitle from '../TitleHooks/useTitle';
 
 const Recipe = () => {
+    // dynamic title 
+    useTitle('Recipe');
     const getData = useLoaderData();
     // console.log(getData.meals);
     const datas = getData.meals;

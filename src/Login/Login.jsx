@@ -2,8 +2,11 @@ import React, { useContext, useState } from 'react';
 import './Login.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import useTitle from '../TitleHooks/useTitle';
 
 const Login = () => {
+    // dynamic title 
+    useTitle('Login')
     const {loginUser} = useContext(AuthContext);
     const [success,setSuccess] = useState();
     const navigate = useNavigate();

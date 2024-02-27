@@ -7,8 +7,12 @@ import { Link, useLoaderData, useNavigation } from 'react-router-dom';
 import BeatLoader from "react-spinners/BeatLoader";
 import Chefs from '../Chefs/Chefs';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import useTitle from '../TitleHooks/useTitle';
 
 const Home = () => {
+    // dynamic title 
+    useTitle('Home');
+    
     const navigation = useNavigation();
     // const chefData = useLoaderData();
 

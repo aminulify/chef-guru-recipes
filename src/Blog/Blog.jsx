@@ -1,7 +1,10 @@
 import React from 'react';
 import './Blog.css';
+import useTitle from '../TitleHooks/useTitle';
 
 const Blog = () => {
+    // dynamic title 
+    useTitle('Blog');
     return (
         <div className='blog-section'>
        

@@ -4,8 +4,12 @@ import Header from '../Shared/Header/Header';
 import Footer from '../Shared/Footer/Footer';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
+import useTitle from '../TitleHooks/useTitle';
+
 
 const Register = () => {
+    // dynamic title 
+    useTitle('Register');
     const {user} = useContext(AuthContext);
     const [success, setSuccess] = useState();
     const navigate = useNavigate();
