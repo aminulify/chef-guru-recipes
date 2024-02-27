@@ -1,13 +1,12 @@
 import React, { useContext, useState } from 'react';
 import './Login.css';
-import Header from '../Shared/Header/Header';
-import Footer from '../Shared/Footer/Footer';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider/AuthProvider';
 
 const Login = () => {
     const {loginUser} = useContext(AuthContext);
     const [success,setSuccess] = useState();
+    const navigate = useNavigate();
 
     const handleLogin = (e) =>{
         e.preventDefault();
@@ -19,6 +18,7 @@ const Login = () => {
         .then(result=>{
             console.log(result.user);
             setSuccess('*Congratulation! Go and explore.')
+            navigate('/');
         })
         .catch(error=>{
             console.log(error)

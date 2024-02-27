@@ -39,10 +39,10 @@ const Register = () => {
         createUser(yourEmail, yourPassword)
         .then(result=>{
             console.log(result.user);
-
+            setSuccess('*Congratulations! Your registration done.')
                 useMoreInfo(displayName, yourImgURL)
             .then(result=>{
-                setSuccess('*Congratulations! Your registration done.')
+                
                 alert('Go explore us!')
                 navigate('/')
                 console.log(result.user);

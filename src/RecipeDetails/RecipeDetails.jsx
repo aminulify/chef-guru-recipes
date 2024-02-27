@@ -8,7 +8,7 @@ const RecipeDetails = ({data,handleItemModal}) => {
     
 
     return (
-        <div className='p-4 border rounded-md lg:flex gap-4 items-center z-50'>
+        <div className='p-4 border rounded-md lg:flex gap-4 z-50'>
             <div className="img-section">
                 <img src={strMealThumb} alt="food-img" className='rounded-sm' />
             </div>
