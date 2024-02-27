@@ -7,6 +7,7 @@
   <li>Then make a json file there provide object wise each chef details and there recipes</li>
   <li>Then deploy that json file in vercel</li>
   <li>Then thing about design and build it.</li>
+  <li>Build responsive website and extra add daymode and nightmode animated button.</li>
   <li>Then daynamiclly use my created json file from deploy link</li>
   <li>If you want to bookmarked chef then see live view increase value</li>
   <li>Finally used google created firebase. Using in registration form, login form and realtime database</li>
