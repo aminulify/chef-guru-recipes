@@ -8,6 +8,7 @@ const Footer = () => {
     
     return (
         <div className='footer-bg' data-aos='fade-up'>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.5508100128977!2d90.4172057739666!3d23.656252492386905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755bbb5ec52284b%3A0xc8315a72fa981bd0!2zRGhhbGkgTW9uamlsIEFyZWEg4Kai4Ka-4Kay4KeAIOCmruCmnuCnjeCmnOCmv-Cmsg!5e0!3m2!1sen!2sbd!4v1709142394554!5m2!1sen!2sbd" className='w-full h-52'  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div className='lg:pb-10 pb-5 pt-3'>
                 <div>
                     <h1 className='heading footerText'>Contact Us</h1>
